@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{dfffa0ed-d306-459b-aa23-e9e34ed39b2f}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>svm\svm_author_id.py</StartupFile>
+    <StartupFile>decision_tree\dt_author_id.py</StartupFile>
     <SearchPath>tools</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
