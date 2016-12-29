@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{dfffa0ed-d306-459b-aa23-e9e34ed39b2f}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>decision_tree\dt_author_id.py</StartupFile>
+    <StartupFile>choose_your_own\your_algorithm.py</StartupFile>
     <SearchPath>tools</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
