@@ -1,16 +1,15 @@
 #!/usr/bin/python
-
+import os
 import pickle
 import cPickle
 import numpy
 
-from sklearn import cross_validation
+from sklearn import model_selection
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectPercentile, f_classif
+fileDir = os.getcwd()
 
-
-
-def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/email_authors.pkl"):
+def preprocess(words_file = os.path.join(fileDir, 'tools\word_data.pkl'), authors_file = os.path.join(fileDir, 'tools\email_authors.pkl')):
     """ 
         this function takes a pre-made list of email texts (by default word_data.pkl)
         and the corresponding authors (by default email_authors.pkl) and performs
@@ -26,7 +25,6 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
             -- training/testing labels
 
     """
-
     ### the words (features) and authors (labels), already largely preprocessed
     ### this preprocessing will be repeated in the text learning mini-project
     authors_file_handler = open(authors_file, "r")
@@ -39,7 +37,7 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
 
     ### test_size is the percentage of events assigned to the test set
     ### (remainder go into training)
-    features_train, features_test, labels_train, labels_test = cross_validation.train_test_split(word_data, authors, test_size=0.1, random_state=42)
+    features_train, features_test, labels_train, labels_test = model_selection.train_test_split(word_data, authors, test_size=0.1, random_state=42)
 
 
 
